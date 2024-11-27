@@ -1,40 +1,34 @@
-// 1. 
-const recipeName = document.getElementById('recipe-name').innerText;
-console.log("Recipe Name:", recipeName);
+const recipeName=document.querySelector("article h1").innerText;
+console.log("Recipe Name:" , recipeName);
 
-// 2. 
-const recipeTag = document.getElementById('recipe-name').tagName;
-console.log("HTML Tag for Recipe Name:", recipeTag);
+const recipeTag=document.querySelector("#recipe-name").tagName;
+console.log("Recipe Tag: ", recipeTag);
 
-// 3. 
-const descriptionFontSize = window.getComputedStyle(document.querySelector('.description')).fontSize;
-console.log("Font Size of Description:", descriptionFontSize);
+const fontSize=window.getComputedStyle(document.querySelector(".description")).fontSize;
+console.log("Font Size: " , fontSize);
 
-// 4. 
-const imageAlt = document.querySelector('.image-container img').alt;
-console.log("Image Alt Attribute:", imageAlt);
+const imageAtrribure=document.querySelector(".image-container img").alt;
+console.log("Image Alt Attrinute: " ,imageAtrribure);
 
-// 5. 
-const imageElement = document.querySelector('.image-container img');
-const imageInfo = {
-  url: imageElement.src,
-  height: imageElement.naturalHeight,
-  width: imageElement.naturalWidth,
+const imageElement= document.querySelector(".image-container img");
+const imageInfo={
+    url: imageElement.src, 
+    height:imageElement.naturalHeight,
+    width: imageElement.naturalWidth,
 };
-console.log("Image Info:", imageInfo);
+console.log("imageInfo: ",imageInfo);
 
-// 6. 
-const pasteIngredientsCount = document.querySelectorAll('.ingredients-list-paste li').length;
-console.log("Number of Paste Ingredients:", pasteIngredientsCount);
+const ingredientPaste=document.querySelectorAll(".ingredients-list-paste li").length;
+console.log("ingredient has past:", ingredientPaste);
 
-// 7. 
-const fourthPasteIngredient = document.querySelectorAll('.ingredients-list-paste li')[3].innerText;
-console.log("Fourth Paste Ingredient:", fourthPasteIngredient);
+const forthElement=document.querySelectorAll(".ingredients-list-paste li") [3].innerText;
+console.log("Forth Element ingredients: ",forthElement);
 
-// 8. 
-const instructionsList = document.querySelectorAll('.instructions-list li');
-const instructionsArray = Array.from(instructionsList).map((item, index) => ({
-  order: index + 1,
-  text: item.innerText,
+const instructionsList=document.querySelectorAll(".instructions-list li")
+const instructionsArray=Array.from(instructionsList).map((instruction, index) =>
+({
+    order: index +1,
+    text: instruction.innerText,
 }));
-console.log("Instructions Array:", instructionsArray);
+
+console.log("instruction Array: " ,instructionsArray);

@@ -1,49 +1,41 @@
+const logoColor=document.querySelector(".logo-text")
+logoColor.style.color="black";
 
+const headerAlignment=document.querySelector("header");
+headerAlignment.style.justifyContent="space-between";
+ 
+// document.querySelector("header").style.borderBottomColor = "black";
+const borderColor=document.querySelector("header");
+borderColor.style.borderBottomColor="black";
 
-// 1. 
-const logoText = document.querySelector('.logo-text');
-logoText.style.color = "#384241"; 
+const recipeName=document.querySelector("#recipe-name");
+recipeName.innerText="Frozen Cheescake";
 
-// 2. 
-const header = document.querySelector('header');
-header.style.justifyContent = "space-between"; 
+const clockIcon=document.querySelector(".time-container span");
+clockIcon.classList.add("material-icons");
 
-// 3. 
-header.style.borderBottom = "1px solid lightgray"; 
+const estimatedTime=document.querySelector(".time-container span.time")
+estimatedTime.innerText="60+ min";
 
-// 4. 
-const recipeNameElement = document.getElementById('recipe-name');
-recipeNameElement.innerText = "Frozen Cheesecake"; 
+const imageSrc=document.querySelector(".image-container img");
+imageSrc.src="assets/frozen-cheesecake-slice.jpg";
 
-// 5. 
-const timeContainer = document.querySelector('.time-container span.material-icons');
-timeContainer.classList.add('material-icons'); 
+const ingredientsBackground=document.querySelector(".ingredients-container");
+ingredientsBackground.style.backgroundColor="#f9f9f9";
 
-// 6. 
-const timeElement = document.querySelector('.time');
-timeElement.innerText = "60+ min"; 
+const bottomIngredientsList=document.querySelector(".ingredients-list-bottom");
+bottomIngredientsList.innerHTML= "<li>15st digistivetex</li> <li> lite smör</li>";
 
-// 7. 
-const imageElement = document.querySelector('.image-container img');
-imageElement.src = "assets/frozen-cheesecake-slice.jpg"; 
+const pasteIngredientsList=document.querySelectorAll(".ingredients-list-paste li");
+pasteIngredientsList[2].innerHTML="<li>3tsk vaniljsocker</li>";
 
-// 8. 
-const ingredientsContainer = document.querySelector('.ingredients-container');
-ingredientsContainer.style.backgroundColor = "#f9f9f9"; 
+const newIngredient=document.createElement("li");
+newIngredient.innerText="400g naturell philadelphiaost";
+document.querySelector(".ingredients-list-paste").appendChild(newIngredient);
 
-// 9. 
-const bottomIngredientsList = document.querySelector('.ingredients-list-bottom');
-bottomIngredientsList.innerHTML = ""; 
-bottomIngredientsList.innerHTML += "<li>15st digistivetex</li><li>Lite smör</li>"; 
+const removeShadow=document.querySelector(".instructions");
+removeShadow.classList.remove("shadow");
 
-// 10. 
-const pasteIngredients = document.querySelectorAll('.ingredients-list-paste li');
-pasteIngredients[2].innerText = "3tsk vaniljsocker"; 
-
-// 11. 
-const newIngredient = document.createElement('li');
-newIngredient.innerText = "400g naturell philadelphiaost"; 
-document.querySelector('.ingredients-list-paste').appendChild(newIngredient);
-
-// 12. 
-const instructionsTitle = document.querySelector('.instructions');
+const instructionsItems=document.querySelectorAll(".instructions-list li");
+instructionsItems[8].innerText="Ställ in i frysen över natten.";
+instructionsItems[9].innerText="Servera och toppa med det du känner för.";
